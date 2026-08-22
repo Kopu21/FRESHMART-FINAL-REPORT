@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produce Inventory - FreshMart Admin</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: { brand: { 500: '#10b981', 600: '#059669', 700: '#047857' } },
+          fontFamily: { heading: ['Outfit', 'sans-serif'], body: ['Plus Jakarta Sans', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body class="bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-200 antialiased min-h-screen flex transition-colors duration-300">
+
+  <!-- Sidebar -->
+  <aside class="w-64 bg-white dark:bg-slate-800 border-r border-slate-200 dark:border-slate-700 flex flex-col justify-between hidden md:flex shrink-0">
+    <div class="p-6 space-y-8">
+      <a href="../index.html" class="flex items-center gap-2.5 whitespace-nowrap group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-emerald-400 flex items-center justify-center text-white font-bold shadow-md">🌿</div>
+        <span class="text-xl font-extrabold font-heading text-slate-900 dark:text-white">Fresh<span class="text-emerald-500">Mart</span></span>
+      </a>
+
+      <nav class="space-y-1.5 text-xs font-bold">
+        <a href="index.html" class="flex items-center gap-3 px-4 py-3 rounded-2xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700/60 transition-colors">
+          <span>📊</span> <span>Analytics Overview</span>
+        </a>
+        <a href="orders.html" class="flex items-center gap-3 px-4 py-3 rounded-2xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700/60 transition-colors">
+          <span>📦</span> <span>Orders Management</span>
+        </a>
+        <a href="products.html" class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-emerald-600 text-white shadow-md">
+          <span>🥕</span> <span>Produce Inventory</span>
+        </a>
+        <a href="users.html" class="flex items-center gap-3 px-4 py-3 rounded-2xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700/60 transition-colors">
+          <span>👥</span> <span>Customers & B2B</span>
+        </a>
+        <a href="messages.html" class="flex items-center gap-3 px-4 py-3 rounded-2xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700/60 transition-colors">
+          <span>✉️</span> <span>Inquiries & RFQs</span>
+        </a>
+      </nav>
+    </div>
+
+    <div class="p-6 border-t border-slate-100 dark:border-slate-700">
+      <a href="../index.html" class="block text-center py-2.5 px-4 rounded-xl bg-slate-100 dark:bg-slate-700 text-xs font-bold hover:text-emerald-600">
+        ← Back to Storefront
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <div class="flex-1 flex flex-col min-w-0 overflow-hidden">
+    <header class="h-20 bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 px-6 sm:px-8 flex items-center justify-between">
+      <div>
+        <h1 class="text-xl font-extrabold font-heading text-slate-900 dark:text-white">Produce & Crop Inventory</h1>
+        <p class="text-xs text-slate-400">Stock levels, morning harvest logs, and catalog pricing</p>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <button onclick="window.openAddProductModal()" class="px-4 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow-md flex items-center gap-1.5">
+          <span>+ Add New Produce</span>
+        </button>
+        <button type="button" class="theme-toggle-btn p-2.5 rounded-xl bg-slate-100 dark:bg-slate-700">
+          <svg class="icon-moon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          <svg class="icon-sun w-5 h-5 hidden text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="flex-1 overflow-y-auto p-6 sm:p-8 space-y-6">
+      
+      <div class="p-6 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead class="text-slate-400 uppercase tracking-wider border-b border-slate-100 dark:border-slate-700 pb-2">
+              <tr>
+                <th class="py-3 px-4">Produce</th>
+                <th class="py-3 px-4">Department</th>
+                <th class="py-3 px-4">Price</th>
+                <th class="py-3 px-4">Current Stock</th>
+                <th class="py-3 px-4">Farm Origin</th>
+                <th class="py-3 px-4 text-right">Status</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 dark:divide-slate-700/60 font-medium">
+              <tr>
+                <td class="py-3 px-4 flex items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?auto=format&fit=crop&w=100&q=80" class="w-10 h-10 rounded-xl object-cover" />
+                  <div>
+                    <p class="font-bold text-slate-900 dark:text-white">Organic Hass Avocados</p>
+                    <p class="text-slate-400 text-[11px]">Pack of 3</p>
+                  </div>
+                </td>
+                <td class="py-3 px-4">Fresh Fruits</td>
+                <td class="py-3 px-4 font-bold text-emerald-600">$4.99</td>
+                <td class="py-3 px-4 font-bold text-slate-800 dark:text-slate-200">45 packs</td>
+                <td class="py-3 px-4 text-slate-400">Green Valley Orchards</td>
+                <td class="py-3 px-4 text-right"><span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold">Active</span></td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 flex items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=100&q=80" class="w-10 h-10 rounded-xl object-cover" />
+                  <div>
+                    <p class="font-bold text-slate-900 dark:text-white">Heirloom Vine Tomatoes</p>
+                    <p class="text-slate-400 text-[11px]">1 kg Basket</p>
+                  </div>
+                </td>
+                <td class="py-3 px-4">Organic Vegetables</td>
+                <td class="py-3 px-4 font-bold text-emerald-600">$3.49</td>
+                <td class="py-3 px-4 font-bold text-slate-800 dark:text-slate-200">60 baskets</td>
+                <td class="py-3 px-4 text-slate-400">Sunlit Valley Farm</td>
+                <td class="py-3 px-4 text-right"><span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold">Active</span></td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 flex items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?auto=format&fit=crop&w=100&q=80" class="w-10 h-10 rounded-xl object-cover" />
+                  <div>
+                    <p class="font-bold text-slate-900 dark:text-white">Mountain Strawberries</p>
+                    <p class="text-slate-400 text-[11px]">400g Clamshell</p>
+                  </div>
+                </td>
+                <td class="py-3 px-4">Fresh Fruits</td>
+                <td class="py-3 px-4 font-bold text-emerald-600">$5.99</td>
+                <td class="py-3 px-4 font-bold text-amber-600">8 clamshells (Low)</td>
+                <td class="py-3 px-4 text-slate-400">Highland Berry Co-op</td>
+                <td class="py-3 px-4 text-right"><span class="px-2.5 py-1 rounded-full bg-amber-100 text-amber-700 text-[10px] font-bold">Low Stock</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Add Produce Modal -->
+  <div id="admin-modal-overlay" class="modal-overlay fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden"></div>
+  <div id="add-product-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+    <div class="bg-white dark:bg-slate-800 rounded-3xl max-w-lg w-full p-6 shadow-2xl border border-slate-200 dark:border-slate-700 space-y-4 max-h-[90vh] overflow-y-auto">
+      <div class="flex justify-between items-center pb-3 border-b border-slate-100 dark:border-slate-700">
+        <h3 class="text-lg font-bold font-heading text-slate-900 dark:text-white">Add New Produce Crop</h3>
+        <button onclick="window.closeAddProductModal()" class="p-2 text-slate-400 hover:text-slate-600">✕</button>
+      </div>
+
+      <form onsubmit="event.preventDefault(); alert('New produce item added to live catalog!'); window.closeAddProductModal();" class="space-y-3 text-xs">
+        <div>
+          <label class="block font-bold text-slate-700 dark:text-slate-300 mb-1">Produce Name</label>
+          <input type="text" required placeholder="e.g. Organic Rainbow Chard" class="w-full px-3 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm focus:outline-none" />
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-bold text-slate-700 dark:text-slate-300 mb-1">Category</label>
+            <select class="w-full px-3 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm focus:outline-none">
+              <option>Organic Vegetables</option>
+              <option>Fresh Fruits</option>
+              <option>Culinary Herbs</option>
+              <option>Organic Dry Fruits</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 dark:text-slate-300 mb-1">Retail Price ($)</label>
+            <input type="number" step="0.01" required placeholder="3.49" class="w-full px-3 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm focus:outline-none" />
+          </div>
+        </div>
+        <div>
+          <label class="block font-bold text-slate-700 dark:text-slate-300 mb-1">Farm Origin & Location</label>
+          <input type="text" required placeholder="e.g. Sonoma Bio Farm, CA" class="w-full px-3 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm focus:outline-none" />
+        </div>
+        <div class="pt-3 flex justify-end gap-2">
+          <button type="button" onclick="window.closeAddProductModal()" class="px-4 py-2 bg-slate-100 dark:bg-slate-700 font-bold text-xs rounded-xl">Cancel</button>
+          <button type="submit" class="px-5 py-2 bg-emerald-600 text-white font-bold text-xs rounded-xl shadow-md">Publish to Catalog</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/admin.js"></script>
+</body>
+</html>
