@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farm Sourcing & Traceability - FreshMart</title>
+  <meta name="description" content="Discover where FreshMart organic vegetables and fruits are grown. Transparent relationships with certified regenerative family farms." />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: { brand: { 500: '#10b981', 600: '#059669', 700: '#047857' } },
+          fontFamily: { heading: ['Outfit', 'sans-serif'], body: ['Plus Jakarta Sans', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-slate-200 antialiased selection:bg-emerald-500 selection:text-white transition-colors duration-300">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 glass-header border-b border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Compulsory Single-line Brand Logo with Icon -->
+        <a href="index.html" class="flex items-center gap-2.5 whitespace-nowrap group shrink-0">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-emerald-600 to-emerald-400 flex items-center justify-center text-white shadow-lg shadow-emerald-500/25 group-hover:scale-105 transition-transform shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <span class="text-2xl sm:text-3xl font-extrabold font-heading text-slate-900 dark:text-white tracking-tight flex items-center gap-1">
+            Fresh<span class="text-emerald-500">Mart</span>
+            <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+          </span>
+        </a>
+
+        <!-- Nav -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-700 dark:text-slate-200">
+          <a href="index.html" class="hover:text-emerald-600 dark:hover:text-emerald-400">Home</a>
+          <a href="products.html" class="hover:text-emerald-600 dark:hover:text-emerald-400">Catalog</a>
+          <a href="farm-sourcing.html" class="text-emerald-600 dark:text-emerald-400 font-bold">Farm Sourcing</a>
+          <a href="seasonal-guide.html" class="hover:text-emerald-600 dark:hover:text-emerald-400">Seasonal Guide</a>
+          <a href="delivery-coverage.html" class="hover:text-emerald-600 dark:hover:text-emerald-400">Coverage</a>
+          <a href="pricing.html" class="hover:text-emerald-600 dark:hover:text-emerald-400">Subscription Boxes</a>
+          <a href="contact.html" class="hover:text-emerald-600 dark:hover:text-emerald-400">Contact</a>
+        </nav>
+
+        <!-- Controls -->
+        <div class="flex items-center gap-3">
+          <button type="button" class="rtl-toggle-btn p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold px-2.5" title="Toggle RTL">
+            <span>🌐</span> <span class="rtl-text">RTL</span>
+          </button>
+          <button type="button" class="theme-toggle-btn p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300" title="Toggle Theme">
+            <svg class="icon-moon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+            <svg class="icon-sun w-5 h-5 hidden text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          </button>
+          <button type="button" class="open-cart-btn relative p-2.5 rounded-xl bg-emerald-500 text-white shadow-md shadow-emerald-500/30">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+            <span class="cart-count-badge absolute -top-1.5 -right-1.5 bg-amber-500 text-white text-[11px] font-extrabold w-5 h-5 rounded-full flex items-center justify-center border-2 border-white dark:border-slate-900">3</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="py-16 bg-gradient-to-b from-emerald-900/10 via-slate-50 to-white dark:from-slate-900 dark:via-slate-900 dark:to-slate-800/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
+      <span class="text-emerald-600 dark:text-emerald-400 font-bold text-xs uppercase tracking-wider">100% Radical Transparency</span>
+      <h1 class="text-4xl sm:text-5xl font-extrabold font-heading text-slate-900 dark:text-white mt-2">
+        Know the Soil, Water & Farmer Behind Every Bite
+      </h1>
+      <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-4 leading-relaxed">
+        We partner directly with certified organic family farms within a 150-mile radius. Zero middlemen, fair compensation for growers, and pure produce for your home.
+      </p>
+    </div>
+  </section>
+
+  <!-- Partner Farm Cards Showcase -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- Farm 1 -->
+      <div class="p-6 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm space-y-4">
+        <div class="h-60 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-700">
+          <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80" alt="Green Valley Orchards" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+        </div>
+        <div class="flex items-center justify-between text-xs text-emerald-600 font-bold">
+          <span>📍 Sonoma County, CA (42 miles away)</span>
+          <span class="bg-emerald-100 dark:bg-emerald-950 px-2.5 py-1 rounded-full">Partner Since 2021</span>
+        </div>
+        <h3 class="text-2xl font-bold font-heading text-slate-900 dark:text-white">Green Valley Organic Orchards</h3>
+        <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+          Specializes in organic Hass avocados, heirloom citrus, and mountain strawberries. Practices cover cropping, natural compost enrichment, and 100% solar-powered drip irrigation.
+        </p>
+        <div class="pt-2 border-t border-slate-100 dark:border-slate-700 text-xs text-slate-500 flex items-center justify-between">
+          <span><strong>Head Grower:</strong> Arthur & Clara Sterling</span>
+          <a href="products.html" class="text-emerald-600 font-bold hover:underline">View Produce →</a>
+        </div>
+      </div>
+
+      <!-- Farm 2 -->
+      <div class="p-6 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm space-y-4">
+        <div class="h-60 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-700">
+          <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=800&q=80" alt="PureAqua Hydroponics" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+        </div>
+        <div class="flex items-center justify-between text-xs text-teal-600 font-bold">
+          <span>📍 Cascade Valley (28 miles away)</span>
+          <span class="bg-teal-100 dark:bg-teal-950 px-2.5 py-1 rounded-full">Hydroponic Pure</span>
+        </div>
+        <h3 class="text-2xl font-bold font-heading text-slate-900 dark:text-white">PureAqua Closed-Loop Hydroponics</h3>
+        <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+          Cultivates crisp English spinach, butterhead lettuce, and culinary basil in filtered mineral spring water with 90% less water usage than traditional open-field farming.
+        </p>
+        <div class="pt-2 border-t border-slate-100 dark:border-slate-700 text-xs text-slate-500 flex items-center justify-between">
+          <span><strong>Head Agronomist:</strong> Dr. Liam Vance</span>
+          <a href="products.html" class="text-emerald-600 font-bold hover:underline">View Produce →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Traceability Scan Banner -->
+  <section class="py-16 bg-slate-900 text-white border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-8 space-y-4">
+          <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold border border-emerald-500/30">Batch Verification</span>
+          <h2 class="text-3xl font-extrabold font-heading">Scan the QR Code on Your Morning Crate</h2>
+          <p class="text-xs sm:text-sm text-slate-300 max-w-xl leading-relaxed">
+            Every FreshMart delivery box carries a laser-etched batch code. Scan it with your phone camera to instantly view the exact farm coordinate, harvest timestamp (hour and minute), soil nutrient reading, and lab purity test.
+          </p>
+        </div>
+        <div class="lg:col-span-4 text-center">
+          <div class="inline-block p-6 bg-white rounded-3xl text-slate-900 shadow-2xl text-center">
+            <div class="w-32 h-32 mx-auto bg-slate-100 rounded-2xl flex items-center justify-center text-4xl border-2 border-dashed border-slate-300">
+              📱 QR
+            </div>
+            <p class="text-xs font-bold mt-2">Sample Harvest Code #FM-8829</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800 text-center text-xs">
+    <div class="max-w-7xl mx-auto px-4 space-y-3">
+      <p class="font-extrabold font-heading text-lg text-white">Fresh<span class="text-emerald-500">Mart</span> Marketplace</p>
+      <p class="text-slate-500">© 2026 FreshMart Inc. Farm Traceability System.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

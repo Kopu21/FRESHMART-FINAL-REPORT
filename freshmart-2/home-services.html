@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farm-to-Table Subscriptions & B2B Supply - FreshMart</title>
+  <meta name="description" content="Commercial organic produce supply and weekly household subscription boxes from FreshMart. Guaranteed cold-chain morning deliveries." />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50: '#ecfdf5', 100: '#d1fae5', 500: '#10b981', 600: '#059669', 700: '#047857', 800: '#065f46', 900: '#064e3b' }
+          },
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-slate-200 antialiased selection:bg-emerald-500 selection:text-white transition-colors duration-300">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 glass-header border-b border-slate-200/80 dark:border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Compulsory Single-line Brand Logo with Icon -->
+        <a href="index.html" class="flex items-center gap-2.5 whitespace-nowrap group shrink-0">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-emerald-600 to-emerald-400 flex items-center justify-center text-white shadow-lg shadow-emerald-500/25 group-hover:scale-105 transition-transform shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <span class="text-2xl sm:text-3xl font-extrabold font-heading text-slate-900 dark:text-white tracking-tight flex items-center gap-1">
+            Fresh<span class="text-emerald-500">Mart</span>
+            <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+          </span>
+        </a>
+
+        <!-- Nav -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-700 dark:text-slate-200">
+          <div class="relative group">
+            <a href="#" class="text-emerald-600 dark:text-emerald-400 flex items-center gap-1 py-2">
+              Home (Services)
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </a>
+            <div class="absolute top-full left-0 w-52 bg-white dark:bg-slate-800 shadow-xl rounded-xl py-2 border border-slate-100 dark:border-slate-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <a href="index.html" class="block px-4 py-2 text-sm hover:text-emerald-600 dark:hover:text-emerald-400">Home 1: Fresh Market</a>
+              <a href="home-services.html" class="block px-4 py-2 text-sm text-emerald-600 font-semibold bg-emerald-50/50 dark:bg-slate-700/50">Home 2: B2B & Subscriptions</a>
+            </div>
+          </div>
+
+          <a href="products.html" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Catalog</a>
+          <a href="pricing.html" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">B2B Plans</a>
+          <a href="farm-sourcing.html" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Farm Sourcing</a>
+          <a href="seasonal-guide.html" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Seasonal Guide</a>
+          <a href="delivery-coverage.html" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Coverage</a>
+          <a href="contact.html" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Custom RFQ</a>
+        </nav>
+
+        <!-- Controls -->
+        <div class="flex items-center gap-3">
+          <button type="button" class="rtl-toggle-btn p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 text-xs font-bold px-2.5 flex items-center gap-1" title="Toggle RTL">
+            <span>🌐</span>
+            <span class="rtl-text">RTL</span>
+          </button>
+          <button type="button" class="theme-toggle-btn p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 transition-colors" title="Toggle Theme">
+            <svg class="icon-moon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+            <svg class="icon-sun w-5 h-5 hidden text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          </button>
+          <a href="login.html" class="hidden sm:inline-flex items-center text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-600 px-3 py-2">Sign In</a>
+          <a href="contact.html" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow-md transition-colors">
+            Request B2B Quote
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="py-16 lg:py-24 bg-gradient-to-b from-emerald-900/10 via-slate-50 to-white dark:from-slate-900 dark:via-slate-900 dark:to-slate-800/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 text-xs font-bold border border-emerald-300 dark:border-emerald-700">
+            <span>🚜 Direct Farm Sourcing Service</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-heading text-slate-900 dark:text-white leading-tight">
+            Commercial Fresh Produce Supply & Scheduled Subscriptions
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300">
+            FreshMart equips restaurants, corporate cafeterias, cafes, and health-conscious families with certified 100% organic farm harvests delivered on a predictable morning schedule.
+          </p>
+
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a href="pricing.html" class="px-7 py-3.5 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-xl shadow-emerald-600/30 transition-all">
+              Explore Supply Plans & Tiers →
+            </a>
+            <a href="contact.html" class="px-7 py-3.5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-white font-bold text-sm hover:border-emerald-500 transition-colors">
+              Book a Farm Demo
+            </a>
+          </div>
+
+          <div class="grid grid-cols-3 gap-6 pt-6 border-t border-slate-200 dark:border-slate-800 text-center sm:text-left">
+            <div>
+              <p class="text-2xl sm:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400">99.8%</p>
+              <p class="text-xs text-slate-500">On-Time 7 AM Delivery</p>
+            </div>
+            <div>
+              <p class="text-2xl sm:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400">450+</p>
+              <p class="text-xs text-slate-500">Commercial Partners</p>
+            </div>
+            <div>
+              <p class="text-2xl sm:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400">0%</p>
+              <p class="text-xs text-slate-500">Artificial Preservatives</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="p-6 rounded-3xl bg-white dark:bg-slate-800 shadow-2xl border border-slate-200 dark:border-slate-700 space-y-6">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-100 dark:border-slate-700">
+              <h3 class="text-lg font-bold font-heading text-slate-900 dark:text-white">Quick Supply Estimator</h3>
+              <span class="text-xs font-bold text-emerald-600 bg-emerald-50 dark:bg-emerald-950/60 px-2.5 py-1 rounded-full">Live Calculator</span>
+            </div>
+
+            <div class="space-y-4 text-xs">
+              <div>
+                <label class="block font-bold text-slate-700 dark:text-slate-300 mb-1">Select Produce Category</label>
+                <select id="bulk-type-select" onchange="window.calculateBulkEstimate()" class="w-full px-3 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-200 text-sm">
+                  <option value="mixed-veggies">Mixed Farm Vegetables ($2.20/kg base)</option>
+                  <option value="seasonal-fruits">Seasonal Orchard Fruits ($3.80/kg base)</option>
+                  <option value="culinary-herbs">Live Culinary Herbs ($6.50/kg base)</option>
+                  <option value="dry-fruits-nuts">Organic Nuts & Dry Fruits ($14.00/kg base)</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block font-bold text-slate-700 dark:text-slate-300 mb-1">Estimated Weekly Volume (Kilograms)</label>
+                <input type="number" id="bulk-volume-input" oninput="window.calculateBulkEstimate()" value="80" min="10" max="1000" class="w-full px-3 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-200 text-sm" />
+              </div>
+
+              <div class="p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800">
+                <div class="flex justify-between items-baseline">
+                  <span class="text-xs text-slate-600 dark:text-slate-300">Estimated Weekly Cost:</span>
+                  <span id="bulk-estimated-cost" class="text-2xl font-extrabold text-emerald-600 dark:text-emerald-400">$149.60</span>
+                </div>
+                <p id="bulk-discount-label" class="text-[11px] text-emerald-700 dark:text-emerald-300 mt-1 font-bold">15% Volume Discount Applied</p>
+              </div>
+
+              <a href="contact.html" class="block w-full py-3 text-center bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm rounded-xl shadow-md transition-colors">
+                Lock In Wholesale Contract Pricing
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Commercial Services Grid -->
+  <section class="py-16 bg-white dark:bg-slate-900/60 border-y border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-emerald-600 font-bold text-xs uppercase tracking-wider">Tailored Programs</span>
+        <h2 class="text-3xl font-extrabold font-heading text-slate-900 dark:text-white mt-1">Our Organic Supply Solutions</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-100 dark:bg-emerald-950 text-emerald-600 flex items-center justify-center text-2xl font-bold">🍽️</div>
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Restaurant & Cafe Supply</h3>
+          <p class="text-xs text-slate-500 leading-relaxed">Grade-A chef curated heirloom varieties, microgreens, hydroponic salads, and fresh culinary herbs delivered daily before 7:00 AM.</p>
+          <a href="contact.html" class="inline-block text-xs font-bold text-emerald-600 hover:underline">Learn More →</a>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-amber-100 dark:bg-amber-950 text-amber-600 flex items-center justify-center text-2xl font-bold">🏢</div>
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Corporate Wellness Baskets</h3>
+          <p class="text-xs text-slate-500 leading-relaxed">Boost workplace productivity and vitality with weekly curated fresh orchard fruit baskets, organic raw nut mixes, and detox citrus boxes.</p>
+          <a href="contact.html" class="inline-block text-xs font-bold text-emerald-600 hover:underline">Learn More →</a>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-teal-100 dark:bg-teal-950 text-teal-600 flex items-center justify-center text-2xl font-bold">🏡</div>
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Household CSA Veggie Boxes</h3>
+          <p class="text-xs text-slate-500 leading-relaxed">Customizable farm box deliveries for residential families. Pick your staples, swap unwanted items, and enjoy 100% certified organic meals.</p>
+          <a href="pricing.html" class="inline-block text-xs font-bold text-emerald-600 hover:underline">View Box Sizes →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800 text-center text-xs">
+    <div class="max-w-7xl mx-auto px-4 space-y-4">
+      <a href="index.html" class="inline-flex items-center gap-2">
+        <div class="w-8 h-8 rounded-xl bg-emerald-500 flex items-center justify-center text-white font-bold">🌿</div>
+        <span class="text-xl font-extrabold font-heading text-white">Fresh<span class="text-emerald-500">Mart</span></span>
+      </a>
+      <p class="text-slate-400">Commercial Organic Produce & Scheduled Subscription Services</p>
+      <p class="text-slate-500">© 2026 FreshMart Marketplace Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

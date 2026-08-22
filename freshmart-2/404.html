@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Page Not Found | FreshMart</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: { brand: { 500: '#10b981', 600: '#059669', 700: '#047857' } },
+          fontFamily: { heading: ['Outfit', 'sans-serif'], body: ['Plus Jakarta Sans', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-slate-200 antialiased min-h-screen flex flex-col justify-between transition-colors duration-300">
+
+  <!-- Header -->
+  <header class="py-4 px-6 border-b border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5 whitespace-nowrap">
+        <div class="w-10 h-10 rounded-xl bg-emerald-500 flex items-center justify-center text-white font-bold">🌿</div>
+        <span class="text-2xl font-extrabold font-heading text-slate-900 dark:text-white">Fresh<span class="text-emerald-500">Mart</span></span>
+      </a>
+      <div class="flex items-center gap-3">
+        <button type="button" class="theme-toggle-btn p-2 rounded-xl bg-slate-100 dark:bg-slate-800">
+          <svg class="icon-moon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          <svg class="icon-sun w-5 h-5 hidden text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 404 Main -->
+  <main class="flex-1 flex items-center justify-center p-6 text-center">
+    <div class="max-w-md space-y-6">
+      <div class="text-8xl">🥑</div>
+      <h1 class="text-6xl font-extrabold font-heading text-slate-900 dark:text-white">404</h1>
+      <h2 class="text-2xl font-bold font-heading text-slate-800 dark:text-slate-100">Looks like this crop was already picked!</h2>
+      <p class="text-xs sm:text-sm text-slate-500">
+        The page or harvest category you are looking for has been relocated or is currently out of season.
+      </p>
+
+      <div class="pt-2 flex flex-wrap justify-center gap-3">
+        <a href="index.html" class="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-lg transition-colors">
+          Back to Market Home
+        </a>
+        <a href="products.html" class="px-6 py-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-white font-bold text-xs hover:border-emerald-500 transition-colors">
+          Browse All Produce
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-4 text-center text-xs text-slate-500">
+    © 2026 FreshMart Marketplace Inc.
+  </footer>
+
+  <script src="assets/js/theme.js"></script>
+</body>
+</html>

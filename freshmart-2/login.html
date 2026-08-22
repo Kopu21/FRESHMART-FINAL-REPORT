@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In - FreshMart Organic Market</title>
+  <meta name="description" content="Access your FreshMart account, track farm orders, and customize your weekly organic veggie crates." />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: { brand: { 500: '#10b981', 600: '#059669', 700: '#047857' } },
+          fontFamily: { heading: ['Outfit', 'sans-serif'], body: ['Plus Jakarta Sans', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-slate-200 antialiased min-h-screen flex flex-col justify-between transition-colors duration-300">
+
+  <!-- Top Utilities Header -->
+  <header class="py-4 px-6 border-b border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <!-- Compulsory Single-line Brand Logo with Icon -->
+      <a href="index.html" class="flex items-center gap-2.5 whitespace-nowrap group shrink-0">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-emerald-400 flex items-center justify-center text-white shadow-md shadow-emerald-500/25 group-hover:scale-105 transition-transform shrink-0">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <span class="text-2xl font-extrabold font-heading text-slate-900 dark:text-white tracking-tight flex items-center gap-1">
+          Fresh<span class="text-emerald-500">Mart</span>
+          <span class="inline-block w-2 h-2 rounded-full bg-emerald-500"></span>
+        </span>
+      </a>
+
+      <!-- Quick Toggles -->
+      <div class="flex items-center gap-3">
+        <button type="button" class="rtl-toggle-btn p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold px-2.5" title="Toggle RTL">
+          <span>🌐</span> <span class="rtl-text">RTL</span>
+        </button>
+        <button type="button" class="theme-toggle-btn p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300" title="Toggle Theme">
+          <svg class="icon-moon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          <svg class="icon-sun w-5 h-5 hidden text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Login Form Container -->
+  <main class="flex-1 flex items-center justify-center p-4 sm:p-6 lg:p-8">
+    <div class="max-w-md w-full bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-2xl border border-slate-200 dark:border-slate-700 space-y-6">
+      
+      <div class="text-center space-y-1">
+        <h1 class="text-2xl font-extrabold font-heading text-slate-900 dark:text-white">Welcome Back</h1>
+        <p class="text-xs text-slate-500">Sign in to manage orders, subscriptions, or access admin</p>
+      </div>
+
+      <!-- Demo Credentials Quick-Fill Pills -->
+      <div class="p-3 bg-emerald-50 dark:bg-slate-900/60 rounded-2xl border border-emerald-200 dark:border-slate-700 text-xs">
+        <p class="font-bold text-emerald-800 dark:text-emerald-400 mb-1.5">⚡ 1-Click Demo Login:</p>
+        <div class="flex gap-2">
+          <button type="button" onclick="fillDemo('customer')" class="px-2.5 py-1 bg-white dark:bg-slate-800 rounded-lg border border-emerald-300 dark:border-slate-600 text-slate-700 dark:text-slate-200 font-semibold hover:bg-emerald-100">
+            Customer
+          </button>
+          <button type="button" onclick="fillDemo('admin')" class="px-2.5 py-1 bg-white dark:bg-slate-800 rounded-lg border border-emerald-300 dark:border-slate-600 text-slate-700 dark:text-slate-200 font-semibold hover:bg-emerald-100">
+            Admin
+          </button>
+        </div>
+      </div>
+
+      <form onsubmit="handleLogin(event)" class="space-y-4 text-xs">
+        <div>
+          <label class="block font-bold text-slate-700 dark:text-slate-300 mb-1">Email Address</label>
+          <input type="email" id="login-email" required placeholder="you@example.com" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm focus:outline-none" />
+        </div>
+
+        <div>
+          <div class="flex justify-between items-center mb-1">
+            <label class="font-bold text-slate-700 dark:text-slate-300">Password</label>
+            <a href="#" onclick="alert('Password reset link has been dispatched to your email.'); return false;" class="text-emerald-600 hover:underline">Forgot password?</a>
+          </div>
+          <div class="relative">
+            <input type="password" id="login-pass" required placeholder="••••••••" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm focus:outline-none" />
+            <button type="button" onclick="togglePassVisibility()" class="absolute right-3 top-3 text-slate-400 hover:text-slate-600">👁️</button>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <input type="checkbox" id="remember" class="w-4 h-4 rounded text-emerald-600 accent-emerald-500" />
+          <label for="remember" class="text-slate-600 dark:text-slate-300">Remember this device for 30 days</label>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm rounded-xl shadow-lg shadow-emerald-600/30 transition-colors">
+          Sign In to FreshMart
+        </button>
+      </form>
+
+      <div class="text-center text-xs text-slate-500 pt-2 border-t border-slate-100 dark:border-slate-700">
+        Don't have an account yet? 
+        <a href="register.html" class="font-bold text-emerald-600 hover:underline ml-1">Create Account →</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-4 text-center text-xs text-slate-500">
+    © 2026 FreshMart Inc. Organic Produce Marketplace.
+  </footer>
+
+  <script src="assets/js/theme.js"></script>
+  <script>
+    function fillDemo(type) {
+      if (type === 'customer') {
+        document.getElementById('login-email').value = 'sarah.jenkins@example.com';
+        document.getElementById('login-pass').value = 'password123';
+      } else {
+        document.getElementById('login-email').value = 'admin@freshmart-market.com';
+        document.getElementById('login-pass').value = 'adminpass2026';
+      }
+    }
+
+    function togglePassVisibility() {
+      const p = document.getElementById('login-pass');
+      p.type = p.type === 'password' ? 'text' : 'password';
+    }
+
+    function handleLogin(e) {
+      e.preventDefault();
+      const email = document.getElementById('login-email').value;
+      if (email.includes('admin')) {
+        window.location.href = 'admin/index.html';
+      } else {
+        window.location.href = 'index.html';
+      }
+    }
+  </script>
+</body>
+</html>

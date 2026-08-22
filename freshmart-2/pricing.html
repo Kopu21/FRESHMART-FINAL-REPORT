@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veggie Box Subscription & B2B Pricing - FreshMart</title>
+  <meta name="description" content="Flexible weekly farm-to-doorstep subscriptions and commercial produce supply plans. 100% organic, pause or cancel anytime." />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: { brand: { 500: '#10b981', 600: '#059669', 700: '#047857' } },
+          fontFamily: { heading: ['Outfit', 'sans-serif'], body: ['Plus Jakarta Sans', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-slate-200 antialiased selection:bg-emerald-500 selection:text-white transition-colors duration-300">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 glass-header border-b border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Compulsory Single-line Brand Logo with Icon -->
+        <a href="index.html" class="flex items-center gap-2.5 whitespace-nowrap group shrink-0">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-emerald-600 to-emerald-400 flex items-center justify-center text-white shadow-lg shadow-emerald-500/25 group-hover:scale-105 transition-transform shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <span class="text-2xl sm:text-3xl font-extrabold font-heading text-slate-900 dark:text-white tracking-tight flex items-center gap-1">
+            Fresh<span class="text-emerald-500">Mart</span>
+            <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+          </span>
+        </a>
+
+        <!-- Nav -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-700 dark:text-slate-200">
+          <a href="index.html" class="hover:text-emerald-600 dark:hover:text-emerald-400">Home</a>
+          <a href="products.html" class="hover:text-emerald-600 dark:hover:text-emerald-400">Catalog</a>
+          <a href="farm-sourcing.html" class="hover:text-emerald-600 dark:hover:text-emerald-400">Farm Sourcing</a>
+          <a href="seasonal-guide.html" class="hover:text-emerald-600 dark:hover:text-emerald-400">Seasonal Guide</a>
+          <a href="delivery-coverage.html" class="hover:text-emerald-600 dark:hover:text-emerald-400">Coverage</a>
+          <a href="pricing.html" class="text-emerald-600 dark:text-emerald-400 font-bold">Subscription Boxes</a>
+          <a href="contact.html" class="hover:text-emerald-600 dark:hover:text-emerald-400">Contact</a>
+        </nav>
+
+        <!-- Controls -->
+        <div class="flex items-center gap-3">
+          <button type="button" class="rtl-toggle-btn p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold px-2.5" title="Toggle RTL">
+            <span>🌐</span> <span class="rtl-text">RTL</span>
+          </button>
+          <button type="button" class="theme-toggle-btn p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300" title="Toggle Theme">
+            <svg class="icon-moon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+            <svg class="icon-sun w-5 h-5 hidden text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          </button>
+          <a href="login.html" class="hidden sm:inline-block text-xs font-bold px-3 py-2 text-slate-700 dark:text-slate-200">Sign In</a>
+          <a href="register.html" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-4 py-2 rounded-xl transition-colors">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero & Pricing Section -->
+  <section class="py-16 bg-gradient-to-b from-emerald-900/10 via-slate-50 to-white dark:from-slate-900 dark:via-slate-900 dark:to-slate-800/40 text-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
+      <span class="text-emerald-600 dark:text-emerald-400 font-bold text-xs uppercase tracking-wider">Simple, Transparent Pricing</span>
+      <h1 class="text-4xl sm:text-5xl font-extrabold font-heading text-slate-900 dark:text-white mt-2">
+        Curated Weekly Farm Boxes
+      </h1>
+      <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-4">
+        Zero contracts. Pause, skip a week, or cancel anytime with one tap. 100% certified organic produce guaranteed.
+      </p>
+
+      <!-- Billing Toggle Switch -->
+      <div class="inline-flex items-center gap-3 mt-8 p-1.5 rounded-2xl bg-slate-200 dark:bg-slate-800 text-xs font-bold">
+        <button id="btn-weekly" onclick="setBilling('weekly')" class="px-5 py-2 rounded-xl bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-sm">
+          Weekly Deliveries
+        </button>
+        <button id="btn-monthly" onclick="setBilling('monthly')" class="px-5 py-2 rounded-xl text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
+          <span>Monthly Prepaid</span>
+          <span class="px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-600 text-[10px] font-extrabold">Save 15%</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Cards Grid -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+      
+      <!-- Tier 1: Solo Box -->
+      <div class="p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col justify-between">
+        <div>
+          <span class="text-xs font-bold uppercase text-slate-500">Individual & Couples</span>
+          <h3 class="text-2xl font-bold font-heading text-slate-900 dark:text-white mt-1">Solo Harvest Box</h3>
+          <p class="text-xs text-slate-500 mt-1">Ideal for 1-2 people cooking 3-4 meals weekly.</p>
+          
+          <div class="mt-6 mb-6">
+            <span class="price-solo text-4xl font-extrabold text-slate-900 dark:text-white font-heading">$24.99</span>
+            <span class="text-xs text-slate-400 billing-period">/ week</span>
+          </div>
+
+          <ul class="space-y-3 text-xs text-slate-600 dark:text-slate-300">
+            <li class="flex items-center gap-2">✓ <strong>6-7 Produce Varieties</strong> (Veggies + Fruit)</li>
+            <li class="flex items-center gap-2">✓ Approx. 4.5 kg of fresh harvest</li>
+            <li class="flex items-center gap-2">✓ 1 Fresh Live Herb pot included</li>
+            <li class="flex items-center gap-2">✓ Free Morning Delivery by 7:30 AM</li>
+            <li class="flex items-center gap-2">✓ Customize up to 2 items each week</li>
+          </ul>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-slate-100 dark:border-slate-700">
+          <a href="register.html" class="block w-full py-3 text-center bg-slate-100 dark:bg-slate-700 hover:bg-emerald-600 hover:text-white text-slate-900 dark:text-white font-bold text-xs rounded-xl transition-colors">
+            Subscribe to Solo Box
+          </a>
+        </div>
+      </div>
+
+      <!-- Tier 2: Family Harvest Crate (Featured) -->
+      <div class="p-8 rounded-3xl bg-white dark:bg-slate-800 border-2 border-emerald-500 shadow-xl relative flex flex-col justify-between">
+        <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-emerald-600 text-white text-[11px] font-extrabold uppercase tracking-wider shadow-md">
+          MOST POPULAR CHOICE
+        </span>
+
+        <div>
+          <span class="text-xs font-bold uppercase text-emerald-600 dark:text-emerald-400">Family Kitchen Staple</span>
+          <h3 class="text-2xl font-bold font-heading text-slate-900 dark:text-white mt-1">Family Harvest Crate</h3>
+          <p class="text-xs text-slate-500 mt-1">Perfect for households of 3-5 hungry eaters.</p>
+          
+          <div class="mt-6 mb-6">
+            <span class="price-family text-4xl font-extrabold text-emerald-600 dark:text-emerald-400 font-heading">$39.99</span>
+            <span class="text-xs text-slate-400 billing-period">/ week</span>
+          </div>
+
+          <ul class="space-y-3 text-xs text-slate-600 dark:text-slate-300">
+            <li class="flex items-center gap-2">✓ <strong>12-14 Produce Varieties</strong></li>
+            <li class="flex items-center gap-2">✓ Approx. 9.5 kg organic staples & fruits</li>
+            <li class="flex items-center gap-2">✓ 2 Culinary Herb Bundles + Surprise Dry Fruit</li>
+            <li class="flex items-center gap-2">✓ Free Priority Morning Express Drop</li>
+            <li class="flex items-center gap-2">✓ Unlimited weekly item swaps in app</li>
+            <li class="flex items-center gap-2">✓ 100% Organic USDA Certified</li>
+          </ul>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-slate-100 dark:border-slate-700">
+          <a href="register.html" class="block w-full py-3.5 text-center bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow-lg shadow-emerald-600/30 transition-all">
+            Subscribe to Family Crate 🌿
+          </a>
+        </div>
+      </div>
+
+      <!-- Tier 3: Gourmet Chef & Office -->
+      <div class="p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col justify-between">
+        <div>
+          <span class="text-xs font-bold uppercase text-slate-500">Culinary & Bulk</span>
+          <h3 class="text-2xl font-bold font-heading text-slate-900 dark:text-white mt-1">Gourmet Feast Crate</h3>
+          <p class="text-xs text-slate-500 mt-1">For passionate home chefs, large families & small offices.</p>
+          
+          <div class="mt-6 mb-6">
+            <span class="price-gourmet text-4xl font-extrabold text-slate-900 dark:text-white font-heading">$59.99</span>
+            <span class="text-xs text-slate-400 billing-period">/ week</span>
+          </div>
+
+          <ul class="space-y-3 text-xs text-slate-600 dark:text-slate-300">
+            <li class="flex items-center gap-2">✓ <strong>18+ Gourmet Heirloom Varieties</strong></li>
+            <li class="flex items-center gap-2">✓ Approx. 15 kg artisan harvest</li>
+            <li class="flex items-center gap-2">✓ Premium Nuts, Raw Almonds & Dates</li>
+            <li class="flex items-center gap-2">✓ Exotic Microgreens & Rare Mushrooms</li>
+            <li class="flex items-center gap-2">✓ Dedicated Account & Sommelier Recipe Cards</li>
+          </ul>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-slate-100 dark:border-slate-700">
+          <a href="register.html" class="block w-full py-3 text-center bg-slate-100 dark:bg-slate-700 hover:bg-emerald-600 hover:text-white text-slate-900 dark:text-white font-bold text-xs rounded-xl transition-colors">
+            Subscribe to Gourmet Crate
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800 text-center text-xs">
+    <div class="max-w-7xl mx-auto px-4 space-y-3">
+      <p class="font-extrabold font-heading text-lg text-white">Fresh<span class="text-emerald-500">Mart</span> Marketplace</p>
+      <p class="text-slate-500">© 2026 FreshMart Inc. Subscription Plans & Pricing.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/theme.js"></script>
+  <script>
+    function setBilling(mode) {
+      const isMonthly = mode === 'monthly';
+      document.getElementById('btn-weekly').className = !isMonthly 
+        ? 'px-5 py-2 rounded-xl bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-sm font-bold' 
+        : 'px-5 py-2 rounded-xl text-slate-600 dark:text-slate-400 font-bold';
+      document.getElementById('btn-monthly').className = isMonthly 
+        ? 'px-5 py-2 rounded-xl bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-sm font-bold flex items-center gap-1.5' 
+        : 'px-5 py-2 rounded-xl text-slate-600 dark:text-slate-400 font-bold flex items-center gap-1.5';
+
+      document.querySelector('.price-solo').textContent = isMonthly ? '$84.99' : '$24.99';
+      document.querySelector('.price-family').textContent = isMonthly ? '$135.99' : '$39.99';
+      document.querySelector('.price-gourmet').textContent = isMonthly ? '$203.99' : '$59.99';
+      
+      document.querySelectorAll('.billing-period').forEach(el => {
+        el.textContent = isMonthly ? '/ month' : '/ week';
+      });
+    }
+  </script>
+</body>
+</html>

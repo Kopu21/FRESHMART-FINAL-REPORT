@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Organic Produce & Services Catalog - FreshMart</title>
+  <meta name="description" content="Browse fresh organic vegetables, fruits, herbs, and dry fruits. Filter by harvest category, price, and certifications." />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: { 500: '#10b981', 600: '#059669', 700: '#047857' }
+          },
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-slate-200 antialiased selection:bg-emerald-500 selection:text-white transition-colors duration-300">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 glass-header border-b border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Compulsory Single-line Brand Logo with Icon -->
+        <a href="index.html" class="flex items-center gap-2.5 whitespace-nowrap group shrink-0">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-emerald-600 to-emerald-400 flex items-center justify-center text-white shadow-lg shadow-emerald-500/25 group-hover:scale-105 transition-transform shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <span class="text-2xl sm:text-3xl font-extrabold font-heading text-slate-900 dark:text-white tracking-tight flex items-center gap-1">
+            Fresh<span class="text-emerald-500">Mart</span>
+            <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+          </span>
+        </a>
+
+        <!-- Nav -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-700 dark:text-slate-200">
+          <a href="index.html" class="hover:text-emerald-600 dark:hover:text-emerald-400">Home</a>
+          <a href="products.html" class="text-emerald-600 dark:text-emerald-400 font-bold">Catalog</a>
+          <a href="farm-sourcing.html" class="hover:text-emerald-600 dark:hover:text-emerald-400">Farm Sourcing</a>
+          <a href="seasonal-guide.html" class="hover:text-emerald-600 dark:hover:text-emerald-400">Seasonal Guide</a>
+          <a href="delivery-coverage.html" class="hover:text-emerald-600 dark:hover:text-emerald-400">Delivery Coverage</a>
+          <a href="pricing.html" class="hover:text-emerald-600 dark:hover:text-emerald-400">Subscription Boxes</a>
+          <a href="contact.html" class="hover:text-emerald-600 dark:hover:text-emerald-400">Contact</a>
+        </nav>
+
+        <!-- Controls -->
+        <div class="flex items-center gap-3">
+          <button type="button" class="rtl-toggle-btn p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold px-2.5" title="Toggle RTL">
+            <span>🌐</span> <span class="rtl-text">RTL</span>
+          </button>
+          <button type="button" class="theme-toggle-btn p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300" title="Toggle Theme">
+            <svg class="icon-moon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+            <svg class="icon-sun w-5 h-5 hidden text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          </button>
+          <button type="button" class="open-cart-btn relative p-2.5 rounded-xl bg-emerald-500 text-white shadow-md shadow-emerald-500/30">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+            <span class="cart-count-badge absolute -top-1.5 -right-1.5 bg-amber-500 text-white text-[11px] font-extrabold w-5 h-5 rounded-full flex items-center justify-center border-2 border-white dark:border-slate-900">3</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb & Header Banner -->
+  <div class="bg-emerald-900/10 dark:bg-slate-800/60 border-b border-slate-200 dark:border-slate-800 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 mb-2">
+        <a href="index.html" class="hover:text-emerald-600">Home</a>
+        <span>/</span>
+        <span class="text-emerald-600 dark:text-emerald-400 font-bold">Produce Catalog</span>
+      </div>
+      <h1 class="text-3xl font-extrabold font-heading text-slate-900 dark:text-white">Fresh Farm Harvest Catalog</h1>
+      <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">Explore 100% certified organic vegetables, crisp orchard fruits, culinary herbs, and dry fruits.</p>
+    </div>
+  </div>
+
+  <!-- Main Catalog Content Grid -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      
+      <!-- Left Filter Sidebar (lg:col-span-3) -->
+      <aside class="lg:col-span-3 space-y-6">
+        <div class="p-6 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm space-y-6">
+          
+          <!-- Search in Catalog -->
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Search Produce</label>
+            <div class="relative">
+              <input type="text" id="catalog-search-input" placeholder="e.g. Avocado, Spinach..." class="w-full px-3 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 focus:outline-none" />
+              <span class="absolute right-3 top-2.5 text-slate-400 text-xs">🔍</span>
+            </div>
+          </div>
+
+          <!-- Category Filter -->
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Department</label>
+            <div class="space-y-1 text-xs">
+              <button onclick="filterCatalogCategory('all')" class="cat-filter-btn w-full text-left px-3 py-2 rounded-xl font-bold bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex justify-between">
+                <span>All Farm Harvests</span>
+                <span class="text-slate-400 font-normal">12</span>
+              </button>
+              <button onclick="filterCatalogCategory('vegetables')" class="cat-filter-btn w-full text-left px-3 py-2 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700/60 flex justify-between">
+                <span>🥦 Organic Vegetables</span>
+                <span class="text-slate-400 font-normal">4</span>
+              </button>
+              <button onclick="filterCatalogCategory('fruits')" class="cat-filter-btn w-full text-left px-3 py-2 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700/60 flex justify-between">
+                <span>🍎 Fresh Fruits</span>
+                <span class="text-slate-400 font-normal">3</span>
+              </button>
+              <button onclick="filterCatalogCategory('herbs')" class="cat-filter-btn w-full text-left px-3 py-2 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700/60 flex justify-between">
+                <span>🌿 Culinary Herbs</span>
+                <span class="text-slate-400 font-normal">2</span>
+              </button>
+              <button onclick="filterCatalogCategory('dry-fruits')" class="cat-filter-btn w-full text-left px-3 py-2 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700/60 flex justify-between">
+                <span>🥜 Organic Dry Fruits</span>
+                <span class="text-slate-400 font-normal">3</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Max Price Filter Slider -->
+          <div>
+            <div class="flex justify-between items-center mb-2 text-xs">
+              <span class="font-bold uppercase tracking-wider text-slate-500">Max Price</span>
+              <span id="price-val-label" class="font-bold text-emerald-600">$15.00</span>
+            </div>
+            <input type="range" id="catalog-price-range" min="1" max="15" value="15" step="0.5" class="w-full accent-emerald-500" oninput="document.getElementById('price-val-label').textContent = '$' + parseFloat(this.value).toFixed(2); renderCatalog();" />
+          </div>
+
+          <!-- Reset Filter -->
+          <button onclick="resetCatalogFilters()" class="w-full py-2 text-center text-xs font-bold text-slate-500 hover:text-red-500 border border-slate-200 dark:border-slate-700 rounded-xl">
+            Reset All Filters
+          </button>
+        </div>
+      </aside>
+
+      <!-- Right Produce Grid (lg:col-span-9) -->
+      <main class="lg:col-span-9 space-y-6">
+        
+        <!-- Controls Bar (Sorting & View Mode) -->
+        <div class="p-4 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+          <p class="text-slate-500">
+            Showing <strong id="catalog-count-label" class="text-slate-900 dark:text-white">12</strong> Fresh Items
+          </p>
+
+          <div class="flex items-center gap-3">
+            <label class="font-bold text-slate-500">Sort By:</label>
+            <select id="catalog-sort-select" onchange="renderCatalog()" class="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-200 focus:outline-none">
+              <option value="default">Featured / Best Match</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="rating">Highest Rated</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Dynamic Product Container -->
+        <div id="catalog-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Populated by JavaScript below -->
+        </div>
+
+        <!-- No Results Fallback -->
+        <div id="catalog-empty" class="hidden text-center py-16 p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700">
+          <div class="text-5xl">🔍</div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-3">No matching produce found</h3>
+          <p class="text-xs text-slate-500 mt-1">Try adjusting your filters or search keywords.</p>
+          <button onclick="resetCatalogFilters()" class="mt-4 px-4 py-2 bg-emerald-600 text-white font-bold text-xs rounded-xl">Clear Filters</button>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800 text-center text-xs">
+    <div class="max-w-7xl mx-auto px-4 space-y-3">
+      <p class="font-extrabold font-heading text-lg text-white">Fresh<span class="text-emerald-500">Mart</span> Marketplace</p>
+      <p class="text-slate-500">© 2026 FreshMart. 100% Certified Organic Farm Deliveries.</p>
+    </div>
+  </footer>
+
+  <!-- Slide-out Cart Drawer -->
+  <div id="cart-drawer-overlay" class="cart-drawer-overlay fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50"></div>
+  <aside id="cart-drawer" class="cart-drawer fixed top-0 right-0 w-96 max-w-full h-full bg-white dark:bg-slate-900 z-50 shadow-2xl flex flex-col justify-between">
+    <div class="p-4 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between">
+      <h3 class="text-lg font-bold font-heading text-slate-900 dark:text-white">Your Fresh Basket</h3>
+      <button type="button" id="close-cart-btn" class="p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="flex-1 overflow-y-auto p-4 space-y-3">
+      <div id="cart-items-container" class="space-y-3"></div>
+      <div id="cart-empty-state" class="hidden text-center py-12">
+        <p class="text-sm font-bold text-slate-500">Your Basket is Empty</p>
+      </div>
+    </div>
+    <div id="cart-footer-state" class="p-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/60 space-y-3">
+      <div class="flex justify-between text-sm font-extrabold text-slate-900 dark:text-white">
+        <span>Estimated Total:</span>
+        <span class="cart-grandtotal-val text-emerald-600 dark:text-emerald-400">$0.00</span>
+      </div>
+      <button onclick="window.showToast('Order Placed Successfully!'); window.closeCartDrawer();" class="w-full py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-lg">
+        Proceed to Checkout →
+      </button>
+    </div>
+  </aside>
+
+  <!-- Quick View Modal Container -->
+  <div id="quick-view-overlay" class="modal-overlay fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50"></div>
+  <div id="quick-view-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+    <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-2xl w-full p-6 shadow-2xl border border-slate-200 dark:border-slate-800 relative max-h-[90vh] overflow-y-auto">
+      <button onclick="window.closeQuickView()" class="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
+        <div class="rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 h-64">
+          <img src="" alt="" class="qv-img w-full h-full object-cover" />
+        </div>
+        <div class="space-y-3">
+          <span class="qv-category text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">Category</span>
+          <h3 class="qv-name text-2xl font-bold font-heading text-slate-900 dark:text-white">Product Name</h3>
+          <div class="flex items-baseline gap-2">
+            <span class="qv-price text-2xl font-extrabold text-emerald-600 dark:text-emerald-400">$0.00</span>
+            <span class="qv-original-price text-sm text-slate-400 line-through">$0.00</span>
+            <span class="qv-unit text-xs text-slate-500">Unit</span>
+          </div>
+          <p class="qv-desc text-xs text-slate-600 dark:text-slate-300 leading-relaxed">Description</p>
+          <div class="text-xs text-slate-500">
+            <strong>Farm Origin:</strong> <span class="qv-origin">Origin</span>
+          </div>
+          <div class="pt-3 flex items-center gap-3">
+            <input type="number" value="1" min="1" max="50" class="qv-qty-input w-16 px-2 py-2 text-center text-sm font-bold rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800" />
+            <button class="qv-add-btn flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm py-2.5 rounded-xl shadow-md transition-colors">
+              Add to Basket
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/products-data.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    let activeCategory = 'all';
+
+    // Parse URL params for initial category filter
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('category')) {
+      activeCategory = urlParams.get('category');
+    }
+
+    function filterCatalogCategory(cat) {
+      activeCategory = cat;
+      document.querySelectorAll('.cat-filter-btn').forEach(btn => {
+        btn.classList.remove('bg-emerald-50', 'dark:bg-emerald-950/60', 'text-emerald-600', 'dark:text-emerald-400', 'font-bold');
+        btn.classList.add('text-slate-600', 'dark:text-slate-300');
+      });
+      event.currentTarget.classList.add('bg-emerald-50', 'dark:bg-emerald-950/60', 'text-emerald-600', 'dark:text-emerald-400', 'font-bold');
+      renderCatalog();
+    }
+
+    function resetCatalogFilters() {
+      activeCategory = 'all';
+      document.getElementById('catalog-search-input').value = '';
+      document.getElementById('catalog-price-range').value = 15;
+      document.getElementById('price-val-label').textContent = '$15.00';
+      document.getElementById('catalog-sort-select').value = 'default';
+      renderCatalog();
+    }
+
+    function renderCatalog() {
+      const searchVal = (document.getElementById('catalog-search-input').value || '').toLowerCase().trim();
+      const maxPrice = parseFloat(document.getElementById('catalog-price-range').value) || 15;
+      const sortMode = document.getElementById('catalog-sort-select').value;
+      const grid = document.getElementById('catalog-grid');
+      const emptyBox = document.getElementById('catalog-empty');
+      const countLabel = document.getElementById('catalog-count-label');
+
+      let filtered = FRESHMART_PRODUCTS.filter(p => {
+        const matchesCategory = (activeCategory === 'all' || p.category === activeCategory);
+        const matchesSearch = p.name.toLowerCase().includes(searchVal) || p.shortDesc.toLowerCase().includes(searchVal);
+        const matchesPrice = p.price <= maxPrice;
+        return matchesCategory && matchesSearch && matchesPrice;
+      });
+
+      // Sorting
+      if (sortMode === 'price-asc') filtered.sort((a, b) => a.price - b.price);
+      else if (sortMode === 'price-desc') filtered.sort((a, b) => b.price - a.price);
+      else if (sortMode === 'rating') filtered.sort((a, b) => b.rating - a.rating);
+
+      countLabel.textContent = filtered.length;
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '';
+        emptyBox.classList.remove('hidden');
+      } else {
+        emptyBox.classList.add('hidden');
+        grid.innerHTML = filtered.map(p => `
+          <div class="produce-card bg-white dark:bg-slate-800 rounded-3xl overflow-hidden border border-slate-200/80 dark:border-slate-700 shadow-sm hover:shadow-xl flex flex-col justify-between">
+            <div class="relative p-4">
+              <span class="absolute top-6 left-6 z-10 px-2.5 py-1 rounded-lg bg-emerald-500 text-white text-[10px] font-extrabold uppercase">${p.badge}</span>
+              ${p.isDeal ? `<span class="absolute top-6 right-6 z-10 px-2.5 py-1 rounded-lg bg-red-500 text-white text-[10px] font-extrabold">-${p.discountPercent}%</span>` : ''}
+              <div class="h-44 overflow-hidden rounded-2xl bg-slate-100 dark:bg-slate-700/50">
+                <img src="${p.image}" alt="${p.name}" class="product-img w-full h-full object-cover" />
+              </div>
+              <button onclick="window.openQuickView('${p.id}')" class="absolute bottom-6 right-6 bg-white/90 dark:bg-slate-800/90 hover:bg-emerald-500 hover:text-white p-2 rounded-xl text-slate-700 dark:text-slate-200 shadow-md backdrop-blur-sm transition-all" title="Quick View">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+              </button>
+            </div>
+            <div class="p-5 pt-0 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between text-xs text-slate-500">
+                  <span>${p.categoryLabel}</span>
+                  <span class="flex items-center text-amber-400 font-bold">★ ${p.rating} (${p.reviewsCount})</span>
+                </div>
+                <a href="product-details.html?id=${p.id}" class="block mt-1 text-base font-bold text-slate-900 dark:text-white hover:text-emerald-600 transition-colors">${p.name}</a>
+                <p class="text-xs text-slate-500 mt-1">${p.unit}</p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-700/60 flex items-center justify-between">
+                <div>
+                  <span class="text-lg font-extrabold text-emerald-600 dark:text-emerald-400">$${p.price.toFixed(2)}</span>
+                  <span class="text-xs text-slate-400 line-through ml-1">$${p.originalPrice.toFixed(2)}</span>
+                </div>
+                <button onclick="window.addToCart('${p.id}', 1)" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-colors shadow-sm">
+                  <span>+ Add</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('catalog-search-input').addEventListener('input', renderCatalog);
+      renderCatalog();
+    });
+  </script>
+</body>
+</html>

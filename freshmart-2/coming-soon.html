@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coming Soon | FreshMart</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: { brand: { 500: '#10b981', 600: '#059669', 700: '#047857' } },
+          fontFamily: { heading: ['Outfit', 'sans-serif'], body: ['Plus Jakarta Sans', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="bg-slate-900 text-slate-200 antialiased min-h-screen flex flex-col justify-between selection:bg-emerald-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="py-6 px-8">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5 whitespace-nowrap">
+        <div class="w-10 h-10 rounded-xl bg-emerald-500 flex items-center justify-center text-white font-bold">🌿</div>
+        <span class="text-2xl font-extrabold font-heading text-white">Fresh<span class="text-emerald-500">Mart</span></span>
+      </a>
+      <a href="index.html" class="text-xs font-bold text-emerald-400 hover:underline">← Return Home</a>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="flex-1 flex items-center justify-center p-6 text-center">
+    <div class="max-w-2xl space-y-8">
+      
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/80 text-emerald-300 text-xs font-bold border border-emerald-700/60">
+        <span>🌱 New Season Expansion</span>
+      </div>
+
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-heading text-white leading-tight">
+        Something Fresh is Sprouting!
+      </h1>
+
+      <p class="text-xs sm:text-sm text-slate-400 max-w-lg mx-auto">
+        We are expanding our farm-to-table delivery routes and launching 30+ new organic hydroponic varieties next week.
+      </p>
+
+      <!-- Countdown Timer -->
+      <div class="flex justify-center gap-4 text-center">
+        <div class="p-4 rounded-2xl bg-slate-800 border border-slate-700 w-20">
+          <span class="block text-3xl font-extrabold font-mono text-emerald-400">07</span>
+          <span class="text-[10px] text-slate-400 uppercase">Days</span>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-800 border border-slate-700 w-20">
+          <span class="block text-3xl font-extrabold font-mono text-emerald-400">14</span>
+          <span class="text-[10px] text-slate-400 uppercase">Hours</span>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-800 border border-slate-700 w-20">
+          <span class="block text-3xl font-extrabold font-mono text-emerald-400">42</span>
+          <span class="text-[10px] text-slate-400 uppercase">Mins</span>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-800 border border-slate-700 w-20">
+          <span class="block text-3xl font-extrabold font-mono text-amber-400">55</span>
+          <span class="text-[10px] text-slate-400 uppercase">Secs</span>
+        </div>
+      </div>
+
+      <!-- Email Notification Form -->
+      <form onsubmit="event.preventDefault(); alert('You are on the VIP early harvest list!');" class="max-w-md mx-auto flex gap-2">
+        <input type="email" required placeholder="Enter your email for early VIP access..." class="flex-1 px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-xs text-white focus:outline-none focus:border-emerald-500" />
+        <button type="submit" class="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow-lg transition-colors shrink-0">
+          Notify Me
+        </button>
+      </form>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-6 text-center text-xs text-slate-500 border-t border-slate-800">
+    © 2026 FreshMart Marketplace Inc. All rights reserved.
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact & Bulk Order Inquiries - FreshMart</title>
+  <meta name="description" content="Get in touch with FreshMart for customer support, wholesale B2B inquiries, farm partnerships, and bulk produce volume orders." />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: { brand: { 500: '#10b981', 600: '#059669', 700: '#047857' } },
+          fontFamily: { heading: ['Outfit', 'sans-serif'], body: ['Plus Jakarta Sans', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-slate-200 antialiased selection:bg-emerald-500 selection:text-white transition-colors duration-300">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 glass-header border-b border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Compulsory Single-line Brand Logo with Icon -->
+        <a href="index.html" class="flex items-center gap-2.5 whitespace-nowrap group shrink-0">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-emerald-600 to-emerald-400 flex items-center justify-center text-white shadow-lg shadow-emerald-500/25 group-hover:scale-105 transition-transform shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <span class="text-2xl sm:text-3xl font-extrabold font-heading text-slate-900 dark:text-white tracking-tight flex items-center gap-1">
+            Fresh<span class="text-emerald-500">Mart</span>
+            <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+          </span>
+        </a>
+
+        <!-- Nav -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-700 dark:text-slate-200">
+          <a href="index.html" class="hover:text-emerald-600 dark:hover:text-emerald-400">Home</a>
+          <a href="products.html" class="hover:text-emerald-600 dark:hover:text-emerald-400">Catalog</a>
+          <a href="farm-sourcing.html" class="hover:text-emerald-600 dark:hover:text-emerald-400">Farm Sourcing</a>
+          <a href="pricing.html" class="hover:text-emerald-600 dark:hover:text-emerald-400">Subscriptions</a>
+          <a href="contact.html" class="text-emerald-600 dark:text-emerald-400 font-bold">Contact Us</a>
+        </nav>
+
+        <!-- Controls -->
+        <div class="flex items-center gap-3">
+          <button type="button" class="rtl-toggle-btn p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold px-2.5" title="Toggle RTL">
+            <span>🌐</span> <span class="rtl-text">RTL</span>
+          </button>
+          <button type="button" class="theme-toggle-btn p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300" title="Toggle Theme">
+            <svg class="icon-moon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+            <svg class="icon-sun w-5 h-5 hidden text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="py-16 bg-gradient-to-b from-emerald-900/10 via-slate-50 to-white dark:from-slate-900 dark:via-slate-900 dark:to-slate-800/40 text-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
+      <span class="text-emerald-600 dark:text-emerald-400 font-bold text-xs uppercase tracking-wider">Here to Help</span>
+      <h1 class="text-4xl sm:text-5xl font-extrabold font-heading text-slate-900 dark:text-white mt-2">
+        Get in Touch & Bulk Order Quotes
+      </h1>
+      <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-4">
+        Whether you are a family wanting weekly delivery or a restaurant needing 200kg of heirloom vegetables, our farm operations team is ready.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact & Bulk Form Grid -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+      
+      <!-- Contact Info & Map (5 cols) -->
+      <div class="lg:col-span-5 space-y-6">
+        <div class="p-6 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm space-y-4">
+          <h3 class="text-xl font-bold font-heading text-slate-900 dark:text-white">Central Market Hub</h3>
+          
+          <div class="space-y-3 text-xs text-slate-600 dark:text-slate-300">
+            <div class="flex items-start gap-3">
+              <span class="text-base text-emerald-600">📍</span>
+              <div>
+                <strong>Physical Address:</strong>
+                <p class="text-slate-500 mt-0.5">742 Evergreen Valley Way, Sonoma County, CA 90210</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-base text-emerald-600">📞</span>
+              <div>
+                <strong>Hotline (Daily 6 AM - 8 PM):</strong>
+                <p class="text-slate-500 mt-0.5">+1 (800) 555-FRESH / +1 (800) 555-3737</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-base text-emerald-600">✉️</span>
+              <div>
+                <strong>Support & Inquiries:</strong>
+                <p class="text-slate-500 mt-0.5">support@freshmart-market.com</p>
+                <p class="text-slate-500">wholesale@freshmart-market.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stylized Map Placeholder -->
+        <div class="rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-700 h-64 relative bg-slate-200 dark:bg-slate-800 flex items-center justify-center">
+          <div class="text-center p-4">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-600 text-white mx-auto flex items-center justify-center text-xl shadow-lg mb-2">📍</div>
+            <h4 class="font-bold text-sm text-slate-900 dark:text-white">FreshMart Valley Hub</h4>
+            <p class="text-[11px] text-slate-500">Open for public farm pickups 7 AM - 6 PM</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bulk Order & General Inquiry Form (7 cols) -->
+      <div class="lg:col-span-7">
+        <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl space-y-6">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Direct Farm RFQ</span>
+            <h3 class="text-2xl font-bold font-heading text-slate-900 dark:text-white mt-1">Send an Inquiry or Bulk Order Request</h3>
+          </div>
+
+          <form onsubmit="event.preventDefault(); window.showToast('Thank you! Your bulk inquiry has been received. Our farm manager will contact you within 2 hours.');" class="space-y-4 text-xs">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block font-bold text-slate-700 dark:text-slate-300 mb-1">Your Full Name</label>
+                <input type="text" required placeholder="Jane Doe" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm focus:outline-none" />
+              </div>
+              <div>
+                <label class="block font-bold text-slate-700 dark:text-slate-300 mb-1">Email Address</label>
+                <input type="email" required placeholder="jane@example.com" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm focus:outline-none" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block font-bold text-slate-700 dark:text-slate-300 mb-1">Phone Number</label>
+                <input type="tel" placeholder="+1 (555) 000-0000" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm focus:outline-none" />
+              </div>
+              <div>
+                <label class="block font-bold text-slate-700 dark:text-slate-300 mb-1">Inquiry Purpose</label>
+                <select class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm focus:outline-none">
+                  <option>Bulk Order (Over 50 kg)</option>
+                  <option>Restaurant / Cafe Supply Contract</option>
+                  <option>Corporate Fruit Basket Plan</option>
+                  <option>General Customer Support</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block font-bold text-slate-700 dark:text-slate-300 mb-1">Estimated Produce Needed & Notes</label>
+              <textarea rows="4" required placeholder="Specify estimated quantities (e.g., 50kg heirloom tomatoes, 20 live basil pots weekly) and delivery address..." class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm focus:outline-none"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm rounded-xl shadow-lg shadow-emerald-600/30 transition-colors">
+              Submit Bulk Request →
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800 text-center text-xs">
+    <div class="max-w-7xl mx-auto px-4 space-y-3">
+      <p class="font-extrabold font-heading text-lg text-white">Fresh<span class="text-emerald-500">Mart</span> Marketplace</p>
+      <p class="text-slate-500">© 2026 FreshMart Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/cart.js"></script>
+</body>
+</html>

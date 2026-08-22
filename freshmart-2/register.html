@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Account - FreshMart Organic Market</title>
+  <meta name="description" content="Register for FreshMart to receive personalized organic harvest boxes, track deliveries, and enjoy member-only discounts." />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: { brand: { 500: '#10b981', 600: '#059669', 700: '#047857' } },
+          fontFamily: { heading: ['Outfit', 'sans-serif'], body: ['Plus Jakarta Sans', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-slate-200 antialiased min-h-screen flex flex-col justify-between transition-colors duration-300">
+
+  <!-- Header -->
+  <header class="py-4 px-6 border-b border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <!-- Compulsory Single-line Brand Logo with Icon -->
+      <a href="index.html" class="flex items-center gap-2.5 whitespace-nowrap group shrink-0">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-emerald-400 flex items-center justify-center text-white shadow-md shadow-emerald-500/25 group-hover:scale-105 transition-transform shrink-0">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <span class="text-2xl font-extrabold font-heading text-slate-900 dark:text-white tracking-tight flex items-center gap-1">
+          Fresh<span class="text-emerald-500">Mart</span>
+          <span class="inline-block w-2 h-2 rounded-full bg-emerald-500"></span>
+        </span>
+      </a>
+
+      <!-- Quick Toggles -->
+      <div class="flex items-center gap-3">
+        <button type="button" class="rtl-toggle-btn p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold px-2.5" title="Toggle RTL">
+          <span>🌐</span> <span class="rtl-text">RTL</span>
+        </button>
+        <button type="button" class="theme-toggle-btn p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300" title="Toggle Theme">
+          <svg class="icon-moon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          <svg class="icon-sun w-5 h-5 hidden text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Register Card -->
+  <main class="flex-1 flex items-center justify-center p-4 sm:p-6 lg:p-8">
+    <div class="max-w-lg w-full bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-2xl border border-slate-200 dark:border-slate-700 space-y-6">
+      
+      <div class="text-center space-y-1">
+        <h1 class="text-2xl font-extrabold font-heading text-slate-900 dark:text-white">Create Your Account</h1>
+        <p class="text-xs text-slate-500">Join 14,000+ homes and restaurants enjoying farm-fresh produce</p>
+      </div>
+
+      <!-- Account Type Switcher -->
+      <div class="grid grid-cols-2 gap-2 p-1.5 bg-slate-100 dark:bg-slate-900 rounded-2xl text-xs font-bold">
+        <button type="button" id="role-retail" onclick="selectRole('retail')" class="py-2 rounded-xl bg-emerald-600 text-white shadow-sm transition-all">
+          🏡 Household / Individual
+        </button>
+        <button type="button" id="role-b2b" onclick="selectRole('b2b')" class="py-2 rounded-xl text-slate-600 dark:text-slate-400 hover:text-slate-900 transition-all">
+          🍽️ Commercial / Restaurant
+        </button>
+      </div>
+
+      <form onsubmit="handleRegister(event)" class="space-y-4 text-xs">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block font-bold text-slate-700 dark:text-slate-300 mb-1">First Name</label>
+            <input type="text" required placeholder="Sarah" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm focus:outline-none" />
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 dark:text-slate-300 mb-1">Last Name</label>
+            <input type="text" required placeholder="Jenkins" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm focus:outline-none" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-700 dark:text-slate-300 mb-1">Email Address</label>
+          <input type="email" required placeholder="sarah@example.com" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm focus:outline-none" />
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-700 dark:text-slate-300 mb-1">Delivery Zip / Postal Code</label>
+          <input type="text" required placeholder="e.g. 90210" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm focus:outline-none" />
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-700 dark:text-slate-300 mb-1">Password</label>
+          <input type="password" id="reg-pass" required placeholder="Create strong password (min 8 chars)" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm focus:outline-none" />
+        </div>
+
+        <div class="flex items-start gap-2">
+          <input type="checkbox" required id="agree" class="w-4 h-4 rounded text-emerald-600 accent-emerald-500 mt-0.5" />
+          <label for="agree" class="text-slate-600 dark:text-slate-300 leading-tight">
+            I agree to FreshMart's <a href="#" class="text-emerald-600 underline">Terms of Service</a> & <a href="#" class="text-emerald-600 underline">Organic Freshness Policy</a>.
+          </label>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm rounded-xl shadow-lg shadow-emerald-600/30 transition-colors">
+          Create FreshMart Account 🌿
+        </button>
+      </form>
+
+      <div class="text-center text-xs text-slate-500 pt-2 border-t border-slate-100 dark:border-slate-700">
+        Already registered? 
+        <a href="login.html" class="font-bold text-emerald-600 hover:underline ml-1">Sign In →</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-4 text-center text-xs text-slate-500">
+    © 2026 FreshMart Inc. All rights reserved.
+  </footer>
+
+  <script src="assets/js/theme.js"></script>
+  <script>
+    function selectRole(role) {
+      const retailBtn = document.getElementById('role-retail');
+      const b2bBtn = document.getElementById('role-b2b');
+      if (role === 'retail') {
+        retailBtn.className = 'py-2 rounded-xl bg-emerald-600 text-white shadow-sm transition-all font-bold';
+        b2bBtn.className = 'py-2 rounded-xl text-slate-600 dark:text-slate-400 hover:text-slate-900 transition-all font-bold';
+      } else {
+        b2bBtn.className = 'py-2 rounded-xl bg-emerald-600 text-white shadow-sm transition-all font-bold';
+        retailBtn.className = 'py-2 rounded-xl text-slate-600 dark:text-slate-400 hover:text-slate-900 transition-all font-bold';
+      }
+    }
+
+    function handleRegister(e) {
+      e.preventDefault();
+      alert('Welcome to FreshMart! Your account is activated.');
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>
